@@ -1,0 +1,50 @@
+<div class="for_info_only" style="text-align: center">
+</div>
+
+
+<p>
+You are given 4 numbers (set of integer).<br>
+
+These number represents a block. You have to identify this (1 of the 7 kinds). 
+</p>
+<p>
+It is possible that the block rotated (0, 90, 180 and 270 degree). If it isn't a block, Then return None.
+</p>
+
+<pre class="brush: python">
+
+    grid(4x4):     block of 7 kinds:
+    +--+--+--+--+                                    
+    |1 |2 |3 |4 |  'I'  'J'  'L'  'O'  'S'  'T'  'Z'
+    +--+--+--+--+                                    
+    |5 |6 |7 |8 |   *    *   *    **    **  ***  **
+    +--+--+--+--+   *    *   *    **   **    *    **
+    |9 |10|11|12|   *   **   **
+    +--+--+--+--+   *
+    |13|14|15|16|
+    +--+--+--+--+
+
+</pre>
+
+<p><strong>Input: </strong>4 numbers (set of integer)</p>
+
+<p><strong>Output: </strong>kind of block (an alphabet or None)</p>
+
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+<pre class="brush: python">
+identify_block({1, 2, 3, 4}) == 'I'
+identify_block({1, 2, 3, 6}) == 'T'
+identify_block({1, 5, 6, 10}) == 'S'
+</pre>
+<p style="text-align: center;"></p>
+<p>
+<strong>Precondition:</strong><br>
+</p>
+<ul>
+    <li> len(input) == 4</li>
+    <li> output in ('I', 'J', 'L', 'O', 'S', 'T', 'Z', None)</li>
+</ul>
+</div>
