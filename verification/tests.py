@@ -80,7 +80,7 @@ TESTS = {
             "answer": None,
         },
         {
-            "input": [[3, 4, 7, 8]],
+            "input": [[6, 7, 10, 11]],
             "answer": 'O',
         },
         {
