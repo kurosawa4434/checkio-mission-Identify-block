@@ -31,5 +31,5 @@ if (!global.is_checking) {
     assert.equal(identifyBlock([2, 3, 7, 11]), 'L', 'L');
     assert.equal(identifyBlock([4, 8, 12, 16]), 'I', 'I');
     assert.equal(identifyBlock([3, 1, 5, 8]), null, 'null');
-    cosole.log('"Run" is good. How is "Check"?');
+    console.log('"Run" is good. How is "Check"?');
 }
