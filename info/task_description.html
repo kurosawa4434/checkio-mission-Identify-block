@@ -3,23 +3,29 @@
 
 
 <p>
-You are given 4 numbers 
+This mission uses a 4x4 grid.
+Each square is numbered from 1 to 16 with row-major order.<br>
+You are given 4 numbers
 {% if interpreter.slug == "js-node" %}
 (list of integer).
 {% else %}
 (set of integer).
 {% endif %}
-<br>
-
-These number represents a block. You have to identify kind of the block. 
+These numbers represent the position of the square on the grid and one block if all the squares are adjacent.
 </p>
 <p>
-It is possible that the block rotated (0, 90, 180 and 270 degree). If it isn't a block, Then return 
+You have to identify kind of the block.
+(Refer to the following image or comment of initial code for kind of the block.)<br>
+The answer is an upper case alphabet ('I', 'J', 'L', 'O', 'S', 'T' or 'Z').
+If it isn't a block, Then return 
 {% if interpreter.slug == "js-node" %}
 null.
 {% else %}
 None.
 {% endif %}
+</p>
+<p>
+The block is placed anywhere on the grid and may be rotating (0, 90, 180 or 270 degrees).
 </p>
 
 <p style="text-align: left;"><img src="{{MEDIA}}grid_and_7blocks.png" style="max-height: 182px;"></p>
@@ -58,10 +64,16 @@ identify_block({1, 5, 6, 10}) == 'S'
 <p style="text-align: left;"><img src="{{MEDIA}}example.png" style="max-height: 234px;"></p>
 
 <p>
+<strong>How it is used:</strong><br>
+Creating a tetromino puzzle.
+</p>
+
+<p>
 <strong>Precondition:</strong><br>
 </p>
 <ul>
     <li> len(input) == 4</li>
+    <li> all(1 <= num <= 16 for num in input)</li>
     <li> output in ('I', 'J', 'L', 'O', 'S', 'T', 'Z',
 {% if interpreter.slug == "js-node" %}
         null
