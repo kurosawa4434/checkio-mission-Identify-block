@@ -3,45 +3,57 @@
 
 
 <p>
-You are given 4 numbers (set of integer).<br>
+You are given 4 numbers 
+{% if interpreter.slug == "js-node" %}
+(list of integer).
+{% else %}
+(set of integer).
+{% endif %}
+<br>
 
 These number represents a block. You have to identify kind of the block. 
 </p>
 <p>
-It is possible that the block rotated (0, 90, 180 and 270 degree). If it isn't a block, Then return None.
+It is possible that the block rotated (0, 90, 180 and 270 degree). If it isn't a block, Then return 
+{% if interpreter.slug == "js-node" %}
+null.
+{% else %}
+None.
+{% endif %}
 </p>
 
 <p style="text-align: left;"><img src="{{MEDIA}}grid_and_7blocks.png" style="max-height: 182px;"></p>
 
-<!--
-<pre class="brush: python">
+<p><strong>Input: </strong>4 numbers 
+{% if interpreter.slug == "js-node" %}
+(list of integer)
+{% else %}
+(set of integer)
+{% endif %}
+</p>
 
-    grid(4x4):     block of 7 kinds:
-    +--+--+--+--+                                    
-    |1 |2 |3 |4 |  'I'  'J'  'L'  'O'  'S'  'T'  'Z'
-    +--+--+--+--+                                    
-    |5 |6 |7 |8 |   *    *   *    **    **  ***  **
-    +--+--+--+--+   *    *   *    **   **    *    **
-    |9 |10|11|12|   *   **   **
-    +--+--+--+--+   *
-    |13|14|15|16|
-    +--+--+--+--+
-
-</pre>
--->
-
-<p><strong>Input: </strong>4 numbers (set of integer)</p>
-
-<p><strong>Output: </strong>kind of the block (an alphabet or None)</p>
+<p><strong>Output: </strong>kind of the block (an alphabet or 
+{% if interpreter.slug == "js-node" %}
+        null
+{% else %}
+        None
+{% endif %}
+)</p>
 
 <div class="for_info_only">
     <p>
         <strong>Example:</strong>
     </p>
 <pre class="brush: python">
+{% if interpreter.slug == "js-node" %}
+identifyBlock({1, 2, 3, 4}) === 'I'
+identifyBlock({1, 2, 3, 6}) === 'T'
+identifyBlock({1, 5, 6, 10}) === 'S'
+{% else %}
 identify_block({1, 2, 3, 4}) == 'I'
 identify_block({1, 2, 3, 6}) == 'T'
 identify_block({1, 5, 6, 10}) == 'S'
+{% endif %}
 </pre>
 <p style="text-align: left;"><img src="{{MEDIA}}example.png" style="max-height: 234px;"></p>
 
@@ -50,6 +62,13 @@ identify_block({1, 5, 6, 10}) == 'S'
 </p>
 <ul>
     <li> len(input) == 4</li>
-    <li> output in ('I', 'J', 'L', 'O', 'S', 'T', 'Z', None)</li>
+    <li> output in ('I', 'J', 'L', 'O', 'S', 'T', 'Z',
+{% if interpreter.slug == "js-node" %}
+        null
+{% else %}
+        None
+{% endif %}
+)
+    </li>
 </ul>
 </div>
