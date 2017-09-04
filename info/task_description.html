@@ -47,17 +47,18 @@ The block is placed anywhere on the grid and can be rotated (0, 90, 180 or 270 d
     <p>
         <strong>Example:</strong>
     </p>
-<pre class="brush: python">
+
 {% if interpreter.slug == "js-node" %}
-identifyBlock({1, 2, 3, 4}) === 'I'
+<pre class="brush: python">identifyBlock({1, 2, 3, 4}) === 'I'
 identifyBlock({1, 2, 3, 6}) === 'T'
 identifyBlock({1, 5, 6, 10}) === 'S'
+</pre>
 {% else %}
-identify_block({1, 2, 3, 4}) == 'I'
+<pre class="brush: python">identify_block({1, 2, 3, 4}) == 'I'
 identify_block({1, 2, 3, 6}) == 'T'
 identify_block({1, 5, 6, 10}) == 'S'
-{% endif %}
 </pre>
+{% endif %}
 <p style="text-align: left;"><img src="{{MEDIA}}example.png" style="max-height: 234px;"></p>
 
 <p>
