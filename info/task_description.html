@@ -3,8 +3,7 @@
 
 
 <p>
-This mission uses a 4x4 grid.
-Each square is numbered from 1 to 16 with row-major order.<br>
+This mission uses a 4x4 grid. Each square is numbered from 1 to 16 in row-major order.<br>
 You are given 4 numbers
 {% if interpreter.slug == "js-node" %}
 (list of integer).
@@ -14,10 +13,8 @@ You are given 4 numbers
 These numbers represent the position of the square on the grid and one block if all the squares are adjacent.
 </p>
 <p>
-You have to identify kind of the block.
-(Refer to the following image or comment of initial code for kind of the block.)<br>
-The answer is an upper case alphabet ('I', 'J', 'L', 'O', 'S', 'T' or 'Z').
-If it isn't a block, Then return 
+You have to identify the kind of block. (Refer to the following image or comment of initial code for the kind of block).<br>
+The answer is an upper case alphabet ('I', 'J', 'L', 'O', 'S', 'T' or 'Z'). If it isn't a block then return 
 {% if interpreter.slug == "js-node" %}
 null.
 {% else %}
@@ -25,7 +22,7 @@ None.
 {% endif %}
 </p>
 <p>
-The block is placed anywhere on the grid and may be rotating (0, 90, 180 or 270 degrees).
+The block is placed anywhere on the grid and can be rotated (0, 90, 180 or 270 degrees).
 </p>
 
 <p style="text-align: left;"><img src="{{MEDIA}}grid_and_7blocks.png" style="max-height: 182px;"></p>
