@@ -50,8 +50,8 @@ The block is placed anywhere on the grid and can be rotated (0, 90, 180 or 270 d
 
 {% if interpreter.slug == "js-node" %}
 <pre class="brush: python">identifyBlock({1, 2, 3, 4}) === 'I'
-identifyBlock({1, 2, 3, 6}) === 'T'
-identifyBlock({1, 5, 6, 10}) === 'S'
+identifyBlock([1, 2, 3, 6]) === 'T'
+identifyBlock([1, 5, 6, 10]) === 'S'
 </pre>
 {% else %}
 <pre class="brush: python">identify_block({1, 2, 3, 4}) == 'I'
