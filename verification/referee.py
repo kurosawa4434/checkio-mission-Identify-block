@@ -32,6 +32,12 @@ from checkio.referees.io import CheckiOReferee
 from checkio.referees import cover_codes
 from tests import TESTS
 
+cover_set_input = '''
+
+def cover(func, in_data):
+    return func(set(in_data[0]))
+
+'''
 
 api.add_listener(
     ON_CONNECT,
@@ -42,7 +48,7 @@ api.add_listener(
             "js": "identifyBlock"
         },
         cover_code={
-            'python-3': cover_codes.unwrap_args,
+            'python-3': cover_set_input,
             'js-node': cover_codes.js_unwrap_args
         }
     ).on_ready)
