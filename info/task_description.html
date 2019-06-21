@@ -6,15 +6,15 @@
 This mission uses a 4x4 grid. Each square is numbered from 1 to 16 in row-major order.<br>
 You are given 4 numbers
 {% if interpreter.slug == "js-node" %}
-(list of integer).
+(a list of integers).
 {% else %}
-(set of integer).
+(a set of integers).
 {% endif %}
 These numbers represent the position of the square on the grid and one block if all the squares are adjacent.
 </p>
 <p>
 You have to identify the kind of block. (Refer to the following image or comment of initial code for the kind of block).<br>
-The answer is an upper case alphabet ('I', 'J', 'L', 'O', 'S', 'T' or 'Z'). If it isn't a block then return 
+The answer is an upper case alphabet letter ('I', 'J', 'L', 'O', 'S', 'T' or 'Z'). If it’s not a block, then return 
 {% if interpreter.slug == "js-node" %}
 null.
 {% else %}
@@ -29,13 +29,13 @@ The block is placed anywhere on the grid and can be rotated (0, 90, 180 or 270 d
 
 <p><strong>Input: </strong>4 numbers 
 {% if interpreter.slug == "js-node" %}
-(list of integer)
+(a list of integers)
 {% else %}
-(set of integer)
+(a set of integers)
 {% endif %}
 </p>
 
-<p><strong>Output: </strong>kind of the block (an alphabet or 
+<p><strong>Output: </strong>the kind of block (an alphabet letter or 
 {% if interpreter.slug == "js-node" %}
         null
 {% else %}
@@ -63,7 +63,7 @@ identify_block({1, 5, 6, 10}) == 'S'
 
 <p>
 <strong>How it is used:</strong><br>
-Creating a tetromino puzzle.
+For creating a tetromino puzzle.
 </p>
 
 <p>
@@ -82,3 +82,4 @@ Creating a tetromino puzzle.
     </li>
 </ul>
 </div>
+
