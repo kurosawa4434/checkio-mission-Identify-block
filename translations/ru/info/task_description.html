@@ -1,0 +1,85 @@
+<div class="for_info_only" style="text-align: center">
+</div>
+
+
+<p>
+Эта миссия использует сетку 4х4. Каждый квадрат пронумерован от 1 до 16 в построчном порядке.<br>
+Вам дано 4 номера
+{% if interpreter.slug == "js-node" %}
+(список целых чисел).
+{% else %}
+(набор целых чисел).
+{% endif %}
+Эти числа представляют положение каждого квадрата на сетке и целый блок, если все квадраты смежны.
+</p>
+<p>
+Вы должны определить тип блока. (Обратите внимание на представленное ниже изображение или комментарий исходного кода для вида блока).
+<br>
+Ответом является буква алфавита в верхнем регистре ('I', 'J', 'L', 'O', 'S', 'T' or 'Z'). Если это не блок, верните 
+{% if interpreter.slug == "js-node" %}
+ноль.
+{% else %}
+None.
+{% endif %}
+</p>
+<p>
+Блок расположен в любом месте на сетке и может вращаться (на 0, 90, 180 или 270 градусов).
+</p>
+
+<p style="text-align: left;"><img src="{{MEDIA}}grid_and_7blocks.png" style="max-height: 182px;"></p>
+
+<p><strong>Входные данные: </strong>4 номера
+{% if interpreter.slug == "js-node" %}
+(список целых чисел)
+{% else %}
+(набор целых чисел)
+{% endif %}
+</p>
+
+<p><strong>Выходные данные: </strong>тип блока (буква алфавита или 
+{% if interpreter.slug == "js-node" %}
+        ноль
+{% else %}
+        None
+{% endif %}
+)</p>
+
+<div class="for_info_only">
+    <p>
+        <strong>Пример:</strong>
+    </p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: python">identifyBlock([1, 2, 3, 4]) === 'I'
+identifyBlock([1, 2, 3, 6]) === 'T'
+identifyBlock([1, 5, 6, 10]) === 'S'
+</pre>
+{% else %}
+<pre class="brush: python">identify_block({1, 2, 3, 4}) == 'I'
+identify_block({1, 2, 3, 6}) == 'T'
+identify_block({1, 5, 6, 10}) == 'S'
+</pre>
+{% endif %}
+<p style="text-align: left;"><img src="{{MEDIA}}example.png" style="max-height: 234px;"></p>
+
+<p>
+<strong>Как это используется:</strong><br>
+Для создания головоломки тетрамино.
+</p>
+
+<p>
+<strong>Предварительное условие:</strong><br>
+</p>
+<ul>
+    <li> len(input) == 4</li>
+    <li> all(1 <= num <= 16 for num in input)</li>
+    <li> output in ('I', 'J', 'L', 'O', 'S', 'T', 'Z',
+{% if interpreter.slug == "js-node" %}
+        null
+{% else %}
+        None
+{% endif %}
+)
+    </li>
+</ul>
+</div>
