@@ -1,4 +1,6 @@
-function identifyBlock(numbers) {
+import assert from "assert";
+
+function identifyBlock(values: number[]): string | null {
     /*
     grid(4x4):
     +--+--+--+--+
@@ -20,16 +22,21 @@ function identifyBlock(numbers) {
      *
 
     */
-    return null; 
+    return '';
 }
 
-var assert = require('assert');
+console.log('Example:');
+console.log(identifyBlock([10, 13, 14, 15]));
 
-if (!global.is_checking) {
-    assert.equal(identifyBlock([10, 13, 14, 15]), 'T', 'T');
-    assert.equal(identifyBlock([1, 5, 9, 6]), 'T', 'T');
-    assert.equal(identifyBlock([2, 3, 7, 11]), 'L', 'L');
-    assert.equal(identifyBlock([4, 8, 12, 16]), 'I', 'I');
-    assert.equal(identifyBlock([3, 1, 5, 8]), null, 'null');
-    console.log('"Run" is good. How is "Check"?');
-}
+// These "asserts" are used for self-checking
+assert.equal(identifyBlock([10, 13, 14, 15]), 'T');
+assert.equal(identifyBlock([1, 5, 9, 6]), 'T');
+assert.equal(identifyBlock([2, 3, 7, 11]), 'L');
+assert.equal(identifyBlock([4, 8, 12, 16]), 'I');
+assert.equal(identifyBlock([3, 1, 5, 8]), undefined);
+assert.equal(identifyBlock([6, 7, 10, 11]), 'O');
+assert.equal(identifyBlock([6, 10, 11, 15]), 'S');
+assert.equal(identifyBlock([7, 6, 10, 14]), 'J');
+assert.equal(identifyBlock([3, 6, 7, 10]), 'Z');
+
+console.log("Coding complete? Click 'Check' to earn cool rewards!");
